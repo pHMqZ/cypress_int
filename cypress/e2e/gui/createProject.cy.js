@@ -1,6 +1,9 @@
 import { faker } from '@faker-js/faker'
 
-describe('Create Project',() =>{
+//Pode ser adicionado tanto no describe quanto no arquivo de configuração do cypress
+const options = { env: { snapshotOnly: true } }
+
+describe('Create Project', options,() =>{
     beforeEach(() =>{
         cy.api_deleteProjects()
         cy.login()

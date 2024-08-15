@@ -27,6 +27,6 @@ describe('Set milestone on issue', () => {
     it('successfully', () => {
         cy.gui_setMilestoneOnIssue(milestone)
 
-        cy.get('.block .milestone').should('contain', milestone)
+        cy.get('.milestone').should('contain', milestone.title)
     })
 })
